@@ -22,7 +22,7 @@ from datetime import datetime
 from datetime import timedelta
 from datetime import date
 
-# test 8/27/2024
+# test3 8/27/2024
 
 def read_csv_array(filename):
 
@@ -228,7 +228,7 @@ def cggrid2modelgrid(cg_forcing):
             data_interp = np.zeros( (np.shape(cg_forcing[key])[0] , len(depths) , ncgt))
             for k in range(0, np.shape(data_interp)[0]):
                 for i in range(0, np.shape(data_interp)[2]):
-                    xnew, data_interp[k, :, i] = forcing.interp2grid(
+                    xnew, data_interp[k, :, i] = interp2grid(
                                                  cg_forcing['depth_data'][0:ir], cg_forcing[key][k, 0:ir, i], depths)
 
         cg_forcing2[key] = data_interp
