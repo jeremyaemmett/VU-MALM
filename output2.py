@@ -86,10 +86,10 @@ def make_autotune_file(gen, params_dict):
     return(fname)
 
 
-def write_autotune_data(autotune_file, data, write_count, test_datetime):
+def write_autotune_data(autotune_file, data, data2, data3, write_count, test_datetime):
 
     with open(autotune_file, "a") as current_file:
-        current_file.write(f"{write_count},{test_datetime},{str(data)}\n")
+        current_file.write(f"{write_count},{test_datetime},{str(data)},{str(data2)},{str(data3)}\n")
 
 
 def write_output(output_files, test_datetime,

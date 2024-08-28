@@ -166,7 +166,7 @@ while year_count < params.years:
         # Write output
         if write_year and write_timestep and params.autotune_flag:
             print(df['f_diff_ch4']-pf['plant_flux_ch4'], write_count, test_datetime)
-            output2.write_autotune_data(params.autotune_file, -1.0 * (df['f_diff_ch4']-pf['plant_flux_ch4']), write_count, test_datetime)
+            output2.write_autotune_data(params.autotune_file, -1.0 * (df['f_diff_ch4']-pf['plant_flux_ch4']), -1.0 * df['f_diff_ch4'], pf['plant_flux_ch4'], write_count, test_datetime)
         if write_year and write_timestep and params.write_flag:
             test = output2.write_output(output_files, test_datetime,
                                         ca, ga, df, pf,

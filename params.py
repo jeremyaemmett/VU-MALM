@@ -106,7 +106,7 @@ begin_drying, drying_rate = 180.0, 0.0010
 # Autotune parameters
 autotune_flag = True
 autotune_mode, autotune_name, sims_per_first_generation, sims_per_generation, n_generations = \
-    'run', cryogrid_name, 3, 3, 3
+    'run', cryogrid_name, 5, 3, 10
 
 saturation_threshold = 50.0 # %
 
